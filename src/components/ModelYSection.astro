@@ -1,33 +1,22 @@
-<section
-  class="landing-section bg-black h-screen w-screen text-center relative overflow-hidden"
-  data-header-color="black"
->
-  <div class="z-30 relative h-full flex flex-col">
-    <header>
-      <h2 class="text-black pt-40 text-[35px] font-medium">Model Y</h2>
-      <p class="text-black text-sm underline underline-offset-2">
-        View Inventory
-      </p>
-    </header>
+---
+import Section from "./Section.astro";
+---
 
-    <footer class="flex flex-grow flex-col justify-end pb-20">
-      <div class="flex mx-auto gap-x-6">
-        <a
-          class="border-[3px] border-gray-600 bg-gray-600 rounded font-medium text-white px-20 py-2 hover:bg-gray-400 hover:border-gray-400 hover:shadow-xl transition-colors duration-500 ease-in-out"
-          href="#">Order Now</a
-        >
-        <a
-          class="bg-white rounded font-medium text-black px-20 py-2 hove:text-black hover:text-white hover:bg-black hover:shadow-xl transition-colors duration-300 ease-in-out inline-flex items-center justify-center"
-          href="#">Demo Drive</a
-        >
-      </div>
-    </footer>
+<Section title="Model Y" subtitle="View Inventory" color="black">
+  <div slot="footer" class="flex mx-auto gap-x-6">
+    <a
+      class="border-[3px] border-gray-600 bg-gray-600 rounded font-medium text-white px-20 py-2 hover:bg-gray-400 hover:border-gray-400 hover:shadow-xl transition-colors duration-500 ease-in-out"
+      href="#">Order Now</a
+    >
+    <a
+      class="bg-white rounded font-medium text-black px-20 py-2 hove:text-black hover:text-white hover:bg-black hover:shadow-xl transition-colors duration-300 ease-in-out inline-flex items-center justify-center"
+      href="#">Demo Drive</a
+    >
   </div>
-  <div class="w-screen h-screen absolute top-0 bottom-0 z-10">
-    <img
-      class="object-center object-cover h-full w-full"
-      src="/ModelY.avif"
-      alt="Model Y"
-    />
-  </div>
-</section>
+  <img
+    slot="background"
+    class="object-center object-cover h-full w-full"
+    src="/ModelY.avif"
+    alt="Model Y"
+  />
+</Section>
